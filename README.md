@@ -13,6 +13,6 @@ At this point we can modify 1-part.sh and 2-part.sh through vim for personal per
 
 save the partition for future with the scripts already configured in case you need a clean reinstall, just start live and mount partition 4 in /run/mount/ and start ./1-part.
 
-Github: https://github.com/ArchItalia/installscript
-Video: [Youtube](https://www.youtube.com/watch?v=Yf1HUUUuTA4)
-Facebook: https://www.facebook.com/groups/architalia
+- Github: https://github.com/ArchItalia/installscript
+- Video: [Youtube](https://www.youtube.com/watch?v=Yf1HUUUuTA4)
+- Facebook: https://www.facebook.com/groups/architalia
