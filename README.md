@@ -3,6 +3,10 @@ install script for archlinux [expert mode]
 
 InstallScript
 Custom BTRFS subvolumes
+
+![image](https://github.com/ArchItalia/installscript/assets/117321045/ca7d2bbb-490a-420b-917a-3809c3c64bde)
+
+
 Video demo of custom 2-part script for installing arch linux with btrfs file system and subvolumes with separate /home partition, to be modified for your own machine and kept in a small dedicated partition.
 
 Guide: it is necessary to prepare the disk by partitioning as seen in the video using "cfdisk", the necessary partitions are 4 efi, root, home, and the small partition dedicated to cloning the scripts for this installation. In this procedure it is assumed that Swap is managed after installation using Zram.
