@@ -36,17 +36,17 @@ umount /mnt
 mount $p3 /mnt
 btrfs su cr /mnt/@home      
 umount /mnt                             
-mount -o noatime,commit=120,compress=zstd,space_cache=v2,ssd,subvol=@ $p2 /mnt 
+mount -o noatime,ssd,space_cache=v2,compress=zstd,discard=async,subvol=@ $p2 /mnt 
 mkdir -p /mnt/boot
 mount $p1 /mnt/boot 
 mkdir -p /mnt/home
-mount -o noatime,commit=120,compress=zstd,space_cache=v2,ssd,subvol=@home $p3 /mnt/home 
+mount -o noatime,ssd,space_cache=v2,compress=zstd,discard=async,subvol=@home $p3 /mnt/home 
 
 
 
 
 reflector --verbose -c $country --sort rate --save /etc/pacman.d/mirrorlist
-pacstrap /mnt base base-devel $kernel linux-firmware $editor
+pacstrap -K /mnt base base-devel $kernel linux-firmware intel-ucode btrfs-progs $editor
 genfstab -Up /mnt > /mnt/etc/fstab
 cp 2-parte.sh /mnt/home/
 arch-chroot /mnt 
