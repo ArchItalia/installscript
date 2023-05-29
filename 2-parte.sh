@@ -6,6 +6,7 @@
 
 localhost="archlinux"
 user="username"
+realname="John Wick"
 rootpw="password"
 userpw="password"
 localegen="en_US.UTF-8 UTF-8"
@@ -33,6 +34,7 @@ useradd -m $user
 echo $user:$userpw | chpasswd
 usermod -aG wheel $user
 usermod -aG video $user
+usermod -c $realname $user
 echo "$user ALL=(ALL:ALL) ALL" >> /etc/sudoers.d/$user
 echo "$user ALL=NOPASSWD: /usr/bin/pacman" >> /etc/sudoers.d/$user
 echo "$user ALL=NOPASSWD: /usr/bin/pikaur" >> /etc/sudoers.d/$user
