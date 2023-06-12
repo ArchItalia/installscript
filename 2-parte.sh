@@ -9,9 +9,6 @@ Red='\033[1;31m'
 Yellow='\033[0;33m'
 Color_Off='\033[0m'
 
-INSTALLED=$(pacman -Qqe)
-
-
 
 # setting variable for arch here ---------------------
 
