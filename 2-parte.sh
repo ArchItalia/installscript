@@ -54,7 +54,7 @@ echo "$user ALL=(ALL:ALL) ALL" >> /etc/sudoers.d/$user
 
 
 #systemd-boot
-pacman -S efibootmgr
+pacman -S efibootmgr --noconfirm
 bootctl --path=/boot install
 echo "default arch-*" >> /boot/loader/loader.conf
 echo "timeout 3" >> /boot/loader/loader.conf
@@ -69,7 +69,7 @@ echo 'ACTION=="add", KERNEL=="zram0", ATTR{comp_algorithm}="zstd", ATTR{disksize
 echo "/dev/zram0 none swap defaults,pri=100 0 0 " >> /etc/fstab
 
 
-pacman -S $pkgs $DE
+pacman -S $pkgs $DE --noconfirm
 
 
 #servizi
