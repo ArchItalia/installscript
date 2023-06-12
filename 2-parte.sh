@@ -34,7 +34,7 @@ useradd -m $user
 echo $user:$userpw | chpasswd
 usermod -aG wheel $user
 usermod -aG video $user
-#usermod -c '$realname' $user
+usermod -c "$realname" $user
 echo "$user ALL=(ALL:ALL) ALL" >> /etc/sudoers.d/$user
 echo "$user ALL=NOPASSWD: /usr/bin/pacman" >> /etc/sudoers.d/$user
 echo "$user ALL=NOPASSWD: /usr/bin/yay" >> /etc/sudoers.d/$user
