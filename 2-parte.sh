@@ -9,6 +9,7 @@ Red='\033[1;31m'
 Yellow='\033[0;33m'
 Color_Off='\033[0m'
 
+INSTALLED=$(pacman -Qqe)
 
 
 
@@ -77,8 +78,23 @@ done
 for pkg in "${MINIGNOME[@]}"; do
  pacman -S $pkg
 done
- 
 
+
+for pbcheck in "${PACKAGESBASE[@]}"; do 
+if echo "$INSTALLED" | grep -qw "$pbcheck"; then
+    echo -e "${Green}$package is installed${Color_Off}"
+  else
+    echo -e "${Red}$package is NOT installed${Color_Off}"
+  fi
+done
+
+for pcheck in "${MINIGNOME[@]}"; do 
+if echo "$INSTALLED" | grep -qw "$pcheck"; then
+    echo -e "${Green}$package is installed${Color_Off}"
+  else
+    echo -e "${Red}$package is NOT installed${Color_Off}"
+  fi
+done
 
 #servizi
 systemctl enable gdm
