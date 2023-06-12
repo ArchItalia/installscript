@@ -4,8 +4,7 @@ install script for archlinux [expert mode]
 InstallScript
 Custom BTRFS subvolumes
 
-
-![Untitled33333333333333](https://github.com/ArchItalia/installscript/assets/103053714/905b4415-d368-41b8-982c-fc98800fab12)
+![Untitled33333333333333](https://github.com/ArchItalia/installscript/assets/117321045/08205c35-f2fc-4c25-9617-e70680b6964d)
 
 
 
