@@ -72,9 +72,6 @@ echo "/dev/zram0 none swap defaults,pri=100 0 0 " >> /etc/fstab
 pacman -S $pkg $DE
 
 
-
-
-
 #servizi
 systemctl enable gdm
 systemctl enable NetworkManager
