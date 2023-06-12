@@ -9,8 +9,6 @@ Custom BTRFS subvolumes
 
 ### [It]🇮🇹
 
-Demo video dello script personalizzato in 2 parti per l'installazione di arch linux con file system btrfs e sottovolumi con partizione /home separata, da modificare per la propria macchina e conservata in una piccola partizione dedicata.
-
 Guida: è necessario preparare il disco partizionando come si vede nel video utilizzando "cfdisk", le partizioni necessarie sono 4 efi, root, home, e la piccola partizione dedicata alla clonazione degli script per questa installazione. In questa procedura si assume che Swap sia gestito dopo l'installazione tramite Zram.
 
 Una volta preparato il disco, formattare la partizione 4 in ext4, montare la partizione in /run/mount, andare nella directory /run/mount, installare git, clonare gli script dal repository di ArchItalia: # git clone https : //github .com/architalia/installscript.git , diamo i permessi con chmod +x *
@@ -21,8 +19,6 @@ salva la partizione per il futuro con gli script già configurati nel caso tu ab
 
 
 ### [En]🇬🇧
-
-Video demo of custom 2-part script for installing arch linux with btrfs file system and subvolumes with separate /home partition, to be modified for your own machine and kept in a small dedicated partition.
 
 Guide: it is necessary to prepare the disk by partitioning as seen in the video using "cfdisk", the necessary partitions are 4 efi, root, home, and the small partition dedicated to cloning the scripts for this installation. In this procedure it is assumed that Swap is managed after installation using Zram.
 
