@@ -26,7 +26,7 @@ km="us" # keymap - lingua della tastiera
 localtime="Europe/Italy" # posizione London, France etc..
 ZS="16G" # dimensione massima della swap che zram deve impostare esempio 4G [4 gigabyte]
 groups="wheel" # aggiungi gruppi all'utente esempio wheel,video,nordvpn etc [non eliminare wheel]
-PACKAGEBASE=(wpa_supplicant wireless_tools netctl net-tools iw networkmanager alsa-utils pipewire-pulse firewalld mtools dosfstools exfatprogs reflector acpi cronie git)
+Pkg=(wpa_supplicant wireless_tools netctl net-tools iw networkmanager alsa-utils pipewire-pulse firewalld mtools dosfstools exfatprogs reflector acpi cronie git)
 DE=(gnome-shell nautilus gnome-console gvfs gnome-control-center xdg-user-dirs-gtk gdm xorg gnome-text-editor gnome-keyring gnome-system-monitor) #GNOME Minimal gnome installation
 #p="sda2"
 #p="vda2"
@@ -72,31 +72,23 @@ echo 'ACTION=="add", KERNEL=="zram0", ATTR{comp_algorithm}="zstd", ATTR{disksize
 echo "/dev/zram0 none swap defaults,pri=100 0 0 " >> /etc/fstab
 
 
-
-for pkgbase in "${PACKAGESBASE[@]}"; do
- pacman -S $pkgbase 
-done
-
-for pkg in "${DE[@]}"; do
- pacman -S $pkg
-done
+pacman -S $pkg $DE
 
 
-for pbcheck in "${PACKAGESBASE[@]}"; do 
-if echo "$INSTALLED" | grep -qw "$pbcheck"; then
+if echo "$INSTALLED" | grep -qw "$pkg"; then
     echo -e "${Green}$package is installed${Color_Off}"
   else
     echo -e "${Red}$package is NOT installed${Color_Off}"
   fi
-done
 
-for pcheck in "${DE[@]}"; do 
-if echo "$INSTALLED" | grep -qw "$pcheck"; then
+
+
+if echo "$INSTALLED" | grep -qw "$DE"; then
     echo -e "${Green}$package is installed${Color_Off}"
   else
     echo -e "${Red}$package is NOT installed${Color_Off}"
   fi
-done
+
 
 
 #servizi
