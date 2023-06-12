@@ -61,7 +61,7 @@ echo "timeout 3" >> /boot/loader/loader.conf
 echo "title Arch Linux
 linux /vmlinuz-linux
 initrd /initramfs-linux.img
-options root=/dev/$p rootflags=subvol=@ rw quiet loglevel=3 rd.system.show_status=auto rd.udev.log_level=3" > /boot/loader/entries/arch.conf
+options root=/dev/"$p" rootflags=subvol=@ rw quiet loglevel=3 rd.system.show_status=auto rd.udev.log_level=3" > /boot/loader/entries/arch.conf
 
 #zram udev rules 
 echo "zram" > /etc/modules-load.d/zram.conf
