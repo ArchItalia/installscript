@@ -26,8 +26,8 @@ km="us" # keymap - lingua della tastiera
 localtime="Europe/Italy" # posizione London, France etc..
 ZS="16G" # dimensione massima della swap che zram deve impostare esempio 4G [4 gigabyte]
 groups="wheel" # aggiungi gruppi all'utente esempio wheel,video,nordvpn etc [non eliminare wheel]
-Pkg=(wpa_supplicant wireless_tools netctl net-tools iw networkmanager alsa-utils pipewire-pulse firewalld mtools dosfstools exfatprogs reflector acpi cronie git)
-DE=(gnome-shell nautilus gnome-console gvfs gnome-control-center xdg-user-dirs-gtk gdm xorg gnome-text-editor gnome-keyring gnome-system-monitor) #GNOME Minimal gnome installation
+Pkg="wpa_supplicant wireless_tools netctl net-tools iw networkmanager alsa-utils pipewire-pulse firewalld mtools dosfstools exfatprogs reflector acpi cronie git"
+DE="gnome-shell nautilus gnome-console gvfs gnome-control-center xdg-user-dirs-gtk gdm xorg gnome-text-editor gnome-keyring gnome-system-monitor" #GNOME Minimal gnome installation
 #p="sda2"
 #p="vda2"
 #p="nvme0n1p2"
@@ -75,19 +75,6 @@ echo "/dev/zram0 none swap defaults,pri=100 0 0 " >> /etc/fstab
 pacman -S $pkg $DE
 
 
-if echo "$INSTALLED" | grep -qw "$pkg"; then
-    echo -e "${Green}$pkg is installed${Color_Off}"
-  else
-    echo -e "${Red}Some packages is NOT installed${Color_Off}"
-  fi
-
-
-
-if echo "$INSTALLED" | grep -qw "$DE"; then
-    echo -e "${Green}$DE is installed${Color_Off}"
-  else
-    echo -e "${Red}Some packages is NOT installed${Color_Off}"
-  fi
 
 
 
