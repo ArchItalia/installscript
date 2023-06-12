@@ -10,7 +10,7 @@ Custom BTRFS subvolumes with zram rules for swap
 
 ### [It] - Italiano 🇮🇹
 
-Guida: è necessario preparare il disco partizionando come si vede nel [video](https://www.youtube.com/watch?v=OfQpp3B5zc8) utilizzando "cfdisk", le partizioni necessarie sono 4 efi, root, home, e la piccola partizione dedicata alla clonazione degli script per questa installazione. In questa procedura si assume che Swap sia gestito dopo l'installazione tramite Zram.
+Guida: è necessario preparare il disco partizionando come si vede nel [video](https://www.youtube.com/watch?v=OfQpp3B5zc8) utilizzando "cfdisk", le partizioni necessarie sono 4 efi, root, home, e la piccola partizione dedicata alla clonazione degli script per questa installazione. In questa procedura la Swap sara' gestita dopo l'installazione tramite Zram.
 
 Una volta preparato il disco, formattare la partizione 4 in ext4, montare la partizione in /run/mount, andare nella directory /run/mount, installare git, clonare gli script dal repository, diamo i permessi con chmod +x *
 
