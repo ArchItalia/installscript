@@ -71,6 +71,8 @@ echo "zram" > /etc/modules-load.d/zram.conf
 echo 'ACTION=="add", KERNEL=="zram0", ATTR{comp_algorithm}="zstd", ATTR{disksize}="'$ZS'", RUN="/usr/bin/mkswap -U clear /dev/%k" , TAG+="systemd"' > /etc/udev/rules.d/99-zram.rules
 echo "/dev/zram0 none swap defaults,pri=100 0 0 " >> /etc/fstab
 
+
+
 for pkgbase in "${PACKAGESBASE[@]}"; do
  pacman -S $pkgbase 
 done
@@ -96,6 +98,7 @@ if echo "$INSTALLED" | grep -qw "$pcheck"; then
   fi
 done
 
+
 #servizi
 systemctl enable gdm
 systemctl enable NetworkManager
@@ -105,7 +108,7 @@ systemctl enable cronie
 systemctl enable reflector
 
 
-rm -r /home/2-parte.sh
+rm -r /home/2-parte.sh #clear
 
 
 
