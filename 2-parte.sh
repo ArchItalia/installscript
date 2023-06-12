@@ -5,14 +5,14 @@
 
 
 localhost="localhost"
-user="username"
-realname="realname"
+user="username"    # username minuscolo
+realname="realname" # nome reale 
 rootpw="password"
 userpw="password"
-localegen="en_US.UTF-8 UTF-8"
-localeconf="LANG=en_US.UTF-8"
+localegen="en_US.UTF-8 UTF-8" # lingua
+localeconf="LANG=en_US.UTF-8"  # lingua
 km="us" # keymap - lingua della tastiera
-localtime="Europe/Italy"
+localtime="Europe/Italy" # posizione
 #p="sda2"
 #p="vda2"
 #p="nvme0n1p2"
