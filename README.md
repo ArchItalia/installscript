@@ -5,7 +5,8 @@ InstallScript
 Custom BTRFS subvolumes
 
 
-![Screenshot from 2023-06-12 16-46-50](https://github.com/ArchItalia/installscript/assets/103053714/c8056be2-4f07-48d7-9f91-98dedcf07cb0)
+![Untitled33333333333333](https://github.com/ArchItalia/installscript/assets/103053714/905b4415-d368-41b8-982c-fc98800fab12)
+
 
 
 ### [It]🇮🇹
