@@ -61,7 +61,7 @@ echo "/dev/zram0 none swap defaults,pri=100 0 0 " >> /etc/fstab
 
 
 #GNOME Minimal gnome installation
- pacman -S wpa_supplicant wireless_tools netctl net-tools iw networkmanager alsa-utils pipewire-pulse firewalld mtools dosfstools gparted reflector acpi cronie git gnome-tweaks gnome-shell nautilus gnome-console gvfs gnome-control-center xdg-user-dirs-gtk gdm xorg evince eog gnome-text-editor gnome-keyring
+ pacman -S wpa_supplicant wireless_tools netctl net-tools iw networkmanager alsa-utils pipewire-pulse firewalld mtools dosfstools exfatprogs gparted reflector acpi cronie git gnome-tweaks gnome-shell nautilus gnome-console gvfs gnome-control-center xdg-user-dirs-gtk gdm xorg evince eog gnome-text-editor gnome-keyring
  systemctl enable gdm
 
 #Cinnamon
