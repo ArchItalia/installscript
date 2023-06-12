@@ -14,6 +14,7 @@ localeconf="LANG=en_US.UTF-8"  # lingua
 km="us" # keymap - lingua della tastiera
 localtime="Europe/Italy" # posizione London, France etc..
 zram-size="16G" # dimensione massima della swap che zram deve impostare esempio 4G [4 gigabyte]
+groups="wheel" # aggiungi gruppi all'utente esempio video, nordvpn etc
 #p="sda2"
 #p="vda2"
 #p="nvme0n1p2"
@@ -33,7 +34,7 @@ echo "::1       localhost" >> /etc/hosts
 echo root:$rootpw | chpasswd
 useradd -m $user
 echo $user:$userpw | chpasswd
-usermod -aG wheel $user
+usermod -aG $groups $user
 usermod -aG video $user
 usermod -c "$realname" $user
 echo "$user ALL=(ALL:ALL) ALL" >> /etc/sudoers.d/$user
