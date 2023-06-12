@@ -18,8 +18,8 @@
 #p3="/dev/sda3" 
 
 #Setting - Country, editor, kernel
-country="" # us
-editor="" # vim - nano 
+country="us" # us
+editor="vim" # vim - nano 
 kernel="linux"
 
 
