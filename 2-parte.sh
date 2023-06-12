@@ -5,7 +5,7 @@
 
 
 localhost="localhost"
-user="username"    # username minuscolo
+user="username"    # username solo minuscolo
 realname="realname" # nome reale con iniziale maiuscola
 rootpw="password"
 userpw="password"
@@ -37,9 +37,9 @@ usermod -aG wheel $user
 usermod -aG video $user
 usermod -c "$realname" $user
 echo "$user ALL=(ALL:ALL) ALL" >> /etc/sudoers.d/$user
-echo "$user ALL=NOPASSWD: /usr/bin/pacman" >> /etc/sudoers.d/$user
-echo "$user ALL=NOPASSWD: /usr/bin/yay" >> /etc/sudoers.d/$user
-echo "$user ALL=NOPASSWD: /usr/bin/vim" >> /etc/sudoers.d/$user
+#echo "$user ALL=NOPASSWD: /usr/bin/pacman" >> /etc/sudoers.d/$user
+#echo "$user ALL=NOPASSWD: /usr/bin/yay" >> /etc/sudoers.d/$user
+#echo "$user ALL=NOPASSWD: /usr/bin/vim" >> /etc/sudoers.d/$user
 
 
 
