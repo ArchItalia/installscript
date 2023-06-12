@@ -74,7 +74,7 @@ systemctl enable NetworkManager
 systemctl enable firewalld
 #systemctl enable bluetooth
 systemctl enable cronie
-#systemctl enable reflector.timer
+#systemctl enable reflector
 
 
 rm -r /home/2-parte.sh
