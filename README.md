@@ -9,7 +9,7 @@ Custom BTRFS subvolumes
 
 ### [It]🇮🇹
 
-Guida: è necessario preparare il disco partizionando come si vede nel video utilizzando "cfdisk", le partizioni necessarie sono 4 efi, root, home, e la piccola partizione dedicata alla clonazione degli script per questa installazione. In questa procedura si assume che Swap sia gestito dopo l'installazione tramite Zram.
+Guida: è necessario preparare il disco partizionando come si vede nel [video](https://www.youtube.com/watch?v=Yf1HUUUuTA4&t=740s) utilizzando "cfdisk", le partizioni necessarie sono 4 efi, root, home, e la piccola partizione dedicata alla clonazione degli script per questa installazione. In questa procedura si assume che Swap sia gestito dopo l'installazione tramite Zram.
 
 Una volta preparato il disco, formattare la partizione 4 in ext4, montare la partizione in /run/mount, andare nella directory /run/mount, installare git, clonare gli script dal repository di ArchItalia: # git clone https : //github .com/architalia/installscript.git , diamo i permessi con chmod +x *
 
@@ -20,7 +20,7 @@ salva la partizione per il futuro con gli script già configurati nel caso tu ab
 
 ### [En]🇬🇧
 
-Guide: it is necessary to prepare the disk by partitioning as seen in the video using "cfdisk", the necessary partitions are 4 efi, root, home, and the small partition dedicated to cloning the scripts for this installation. In this procedure it is assumed that Swap is managed after installation using Zram.
+Guide: it is necessary to prepare the disk by partitioning as seen in the [video](https://www.youtube.com/watch?v=Yf1HUUUuTA4&t=740s) using "cfdisk", the necessary partitions are 4 efi, root, home, and the small partition dedicated to cloning the scripts for this installation. In this procedure it is assumed that Swap is managed after installation using Zram.
 
 Once the disk has been prepared, format partition 4 in ext4, mount the partition in /run/mount, go to the /run/mount directory, install git, clone the scripts from the ArchItalia repository: # git clone https : //github.com/architalia/installscript.git , we give permissions with chmod +x *
 
