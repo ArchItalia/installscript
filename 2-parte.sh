@@ -6,7 +6,7 @@
 
 localhost="localhost"
 user="username"    # username minuscolo
-realname="realname" # nome reale 
+realname="realname" # nome reale con iniziale maiuscola
 rootpw="password"
 userpw="password"
 localegen="en_US.UTF-8 UTF-8" # lingua
