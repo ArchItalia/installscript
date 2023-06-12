@@ -2,7 +2,17 @@
 # author Jonathan Sanfilippo
 # installazione parte seconda chroot
 
+# Colors
+Green='\033[1;32m'
+Blue='\033[1;34m'
+Red='\033[1;31m'
+Yellow='\033[0;33m'
+Color_Off='\033[0m'
 
+
+
+
+# setting variable for arch here ---------------------
 
 localhost="localhost"
 user="username"    # username solo minuscolo
@@ -14,7 +24,9 @@ localeconf="LANG=en_US.UTF-8"  # lingua
 km="us" # keymap - lingua della tastiera
 localtime="Europe/Italy" # posizione London, France etc..
 ZS="16G" # dimensione massima della swap che zram deve impostare esempio 4G [4 gigabyte]
-groups="wheel,video" # aggiungi gruppi all'utente esempio wheel,video,nordvpn etc [non eliminare wheel]
+groups="wheel" # aggiungi gruppi all'utente esempio wheel,video,nordvpn etc [non eliminare wheel]
+PACKAGEBASE=(wpa_supplicant wireless_tools netctl net-tools iw networkmanager alsa-utils pipewire-pulse firewalld mtools dosfstools exfatprogs reflector acpi cronie git)
+MINIGNOME=(gnome-shell nautilus gnome-console gvfs gnome-control-center xdg-user-dirs-gtk gdm xorg gnome-text-editor gnome-keyring gnome-system-monitor) #GNOME Minimal gnome installation
 #p="sda2"
 #p="vda2"
 #p="nvme0n1p2"
@@ -58,25 +70,16 @@ echo "zram" > /etc/modules-load.d/zram.conf
 echo 'ACTION=="add", KERNEL=="zram0", ATTR{comp_algorithm}="zstd", ATTR{disksize}="'$ZS'", RUN="/usr/bin/mkswap -U clear /dev/%k" , TAG+="systemd"' > /etc/udev/rules.d/99-zram.rules
 echo "/dev/zram0 none swap defaults,pri=100 0 0 " >> /etc/fstab
 
+for pkgbase in "${PACKAGESBASE[@]}"; do
+ pacman -S $pkgbase 
+done
 
 
-#GNOME Minimal gnome installation
- pacman -S wpa_supplicant wireless_tools netctl net-tools iw networkmanager alsa-utils pipewire-pulse firewalld mtools dosfstools exfatprogs gparted reflector acpi cronie git gnome-tweaks gnome-shell nautilus gnome-console gvfs gnome-control-center xdg-user-dirs-gtk gdm xorg evince eog gnome-text-editor gnome-keyring
- systemctl enable gdm
+ 
 
-#Cinnamon
-# pacman -S cinnamon nemo-fileroller gnome-terminal lightdm-gtk-greeter lightdm-gtk-greeter-settings xdg-user-dirs-gtk xorg wpa_supplicant wireless_tools netctl net-tools iw networkmanager alsa-utils pipewire-pulse firewalld mtools dosfstools gparted bluez bluez-utils reflector acpi cronie git xed evince eog gnome-calculator gnome-clocks gnome-system-monitor gparted  
-# systemctl enable lightdm
-
-#XFCE
-# pacman -S xfce4 xfce4-goodies lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings epiphany xorg wpa_supplicant wireless_tools netctl net-tools iw networkmanager alsa-utils pipewire-pulse firewalld mtools dosfstools gparted bluez bluez-utils reflector acpi cronie pacman-contrib git wget jq gparted 
-# systemctl enable lightdm
-
-#KDE
-# pacman -S sddm plasma ark konsole dolphin xorg wpa_supplicant wireless_tools netctl net-tools iw networkmanager alsa-utils  firewalld mtools dosfstools gparted bluez bluez-utils reflector acpi cronie pacman-contrib git wget jq gparted 
-# systemctl enable sddm  
 
 #servizi
+systemctl enable gdm
 systemctl enable NetworkManager
 systemctl enable firewalld
 systemctl enable bluetooth
