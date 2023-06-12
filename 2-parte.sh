@@ -74,7 +74,9 @@ for pkgbase in "${PACKAGESBASE[@]}"; do
  pacman -S $pkgbase 
 done
 
-
+for pkg in "${MINIGNOME[@]}"; do
+ pacman -S $pkg
+done
  
 
 
