@@ -61,19 +61,18 @@ genfstab -Up /mnt > /mnt/etc/fstab
 
 
 # List of packages to check
-PACKAGES=(base base-devel $kernel linux-firmware intel-ucode btrfs-progs $editor)
+pkg="base base-devel $kernel linux-firmware intel-ucode btrfs-progs $editor"
 # Get a list of installed packages
 INSTALLED=$(pacman -Qqe)
 
 # Iterate through the list of packages
-for package in "${PACKAGES[@]}"; do
-  if echo "$INSTALLED" | grep -qw "$package"; then
+  if echo "$INSTALLED" | grep -qw "$pkg"; then
     echo -e "${Green}$package is installed${Color_Off}"
     cp 2-parte.sh /mnt/home/
     arch-chroot /mnt 
   else
     echo -e "${Red}$package is NOT installed${Color_Off}"
   fi
-done
+
 
 
