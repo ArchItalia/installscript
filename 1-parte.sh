@@ -45,7 +45,7 @@ mount -o noatime,ssd,space_cache=v2,compress=zstd,discard=async,subvol=@home $p3
 
 
 
-reflector --verbose -c $country -a 6 --sort rate --save /etc/pacman.d/mirrorlist
+reflector --verbose -c $country -a 6 --sort age --save /etc/pacman.d/mirrorlist
 pacstrap -K /mnt base base-devel $kernel linux-firmware intel-ucode btrfs-progs $editor
 genfstab -Up /mnt > /mnt/etc/fstab
 cp 2-parte.sh /mnt/home/
