@@ -13,7 +13,7 @@ localegen="en_US.UTF-8 UTF-8" # lingua
 localeconf="LANG=en_US.UTF-8"  # lingua
 km="us" # keymap - lingua della tastiera
 localtime="Europe/Italy" # posizione London, France etc..
-zram-size="16G" # dimensione massima della swap che zram deve impostare esempio 4G [4 gigabyte]
+zsize="16G" # dimensione massima della swap che zram deve impostare esempio 4G [4 gigabyte]
 groups="wheel,video" # aggiungi gruppi all'utente esempio wheel,video,nordvpn etc [non eliminare wheel]
 #p="sda2"
 #p="vda2"
@@ -55,7 +55,7 @@ options root=/dev/$p rootflags=subvol=@ rw quiet loglevel=3 rd.system.show_statu
 
 #zram udev rules 
 echo "zram" > /etc/modules-load.d/zram.conf
-echo 'ACTION=="add", KERNEL=="zram0", ATTR{comp_algorithm}="zstd", ATTR{disksize}="$zram-size", RUN="/usr/bin/mkswap -U clear /dev/%k" , TAG+="systemd"' > /etc/udev/rules.d/99-zram.rules
+echo 'ACTION=="add", KERNEL=="zram0", ATTR{comp_algorithm}="zstd", ATTR{disksize}="$zsize", RUN="/usr/bin/mkswap -U clear /dev/%k" , TAG+="systemd"' > /etc/udev/rules.d/99-zram.rules
 echo "/dev/zram0 none swap defaults,pri=100 0 0 " >> /etc/fstab
 
 
