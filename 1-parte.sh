@@ -67,11 +67,11 @@ INSTALLED=$(pacman -Qqe)
 
 # Iterate through the list of packages
   if echo "$INSTALLED" | grep -qw "$pkg"; then
-    echo -e "${Green}$package is installed${Color_Off}"
+    echo -e "${Green}$pkg is installed${Color_Off}"
     cp 2-parte.sh /mnt/home/
     arch-chroot /mnt 
   else
-    echo -e "${Red}$package is NOT installed${Color_Off}"
+    echo -e "${Red}Some packages is NOT installed${Color_Off}"
   fi
 
 
