@@ -14,7 +14,7 @@ localeconf="LANG=en_US.UTF-8"  # lingua
 km="us" # keymap - lingua della tastiera
 localtime="Europe/Italy" # posizione London, France etc..
 zram-size="16G" # dimensione massima della swap che zram deve impostare esempio 4G [4 gigabyte]
-groups="wheel" # aggiungi gruppi all'utente esempio video, nordvpn etc
+groups="wheel" # aggiungi gruppi all'utente esempio video, nordvpn etc [non eliminare wheel]
 #p="sda2"
 #p="vda2"
 #p="nvme0n1p2"
