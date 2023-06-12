@@ -27,7 +27,7 @@ localtime="Europe/Italy" # posizione London, France etc..
 ZS="16G" # dimensione massima della swap che zram deve impostare esempio 4G [4 gigabyte]
 groups="wheel" # aggiungi gruppi all'utente esempio wheel,video,nordvpn etc [non eliminare wheel]
 PACKAGEBASE=(wpa_supplicant wireless_tools netctl net-tools iw networkmanager alsa-utils pipewire-pulse firewalld mtools dosfstools exfatprogs reflector acpi cronie git)
-MINIGNOME=(gnome-shell nautilus gnome-console gvfs gnome-control-center xdg-user-dirs-gtk gdm xorg gnome-text-editor gnome-keyring gnome-system-monitor) #GNOME Minimal gnome installation
+DE=(gnome-shell nautilus gnome-console gvfs gnome-control-center xdg-user-dirs-gtk gdm xorg gnome-text-editor gnome-keyring gnome-system-monitor) #GNOME Minimal gnome installation
 #p="sda2"
 #p="vda2"
 #p="nvme0n1p2"
@@ -77,7 +77,7 @@ for pkgbase in "${PACKAGESBASE[@]}"; do
  pacman -S $pkgbase 
 done
 
-for pkg in "${MINIGNOME[@]}"; do
+for pkg in "${DE[@]}"; do
  pacman -S $pkg
 done
 
@@ -90,7 +90,7 @@ if echo "$INSTALLED" | grep -qw "$pbcheck"; then
   fi
 done
 
-for pcheck in "${MINIGNOME[@]}"; do 
+for pcheck in "${DE[@]}"; do 
 if echo "$INSTALLED" | grep -qw "$pcheck"; then
     echo -e "${Green}$package is installed${Color_Off}"
   else
