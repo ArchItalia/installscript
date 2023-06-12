@@ -13,6 +13,7 @@ localegen="en_US.UTF-8 UTF-8" # lingua
 localeconf="LANG=en_US.UTF-8"  # lingua
 km="us" # keymap - lingua della tastiera
 localtime="Europe/Italy" # posizione
+zram-size="16G"
 #p="sda2"
 #p="vda2"
 #p="nvme0n1p2"
@@ -51,6 +52,12 @@ echo "title Arch Linux
 linux /vmlinuz-linux
 initrd /initramfs-linux.img
 options root=/dev/$p rootflags=subvol=@ rw quiet loglevel=3 rd.system.show_status=auto rd.udev.log_level=3" > /boot/loader/entries/arch.conf
+
+#zram udev rules 
+echo "zram" > /etc/modules-load.d/zram.conf
+echo 'ACTION=="add", KERNEL=="zram0", ATTR{comp_algorithm}="zstd", ATTR{disksize}="16G", RUN="/usr/bin/mkswap -U clear /dev/%k" , TAG+="systemd"' > /etc/udev/rules.d/99-zram.rules
+echo "/dev/zram0 none swap defaults,pri=100 0 0 " >> /etc/fstab
+
 
 
 #GNOME Minimal gnome installation
