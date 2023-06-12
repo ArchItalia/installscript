@@ -35,3 +35,4 @@ save the partition for future with the scripts already configured in case you ne
 - Github: https://github.com/ArchItalia/installscript
 - Video: [Youtube](https://www.youtube.com/watch?v=Yf1HUUUuTA4)
 - Facebook: https://www.facebook.com/groups/architalia
+- Donate: https://www.paypal.com/donate/?hosted_button_id=3C4YAF9NXMEWL
