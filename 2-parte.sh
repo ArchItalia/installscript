@@ -4,16 +4,16 @@
 
 
 
-localhost="archlinux"
+localhost="localhost"
 user="username"
-realname="John Wick"
+realname="realname"
 rootpw="password"
 userpw="password"
 localegen="en_US.UTF-8 UTF-8"
 localeconf="LANG=en_US.UTF-8"
-km="us"
-localtime="Europe/London"
-p="sda2"
+km="us" # keymap - lingua della tastiera
+localtime="Europe/Italy"
+#p="sda2"
 #p="vda2"
 #p="nvme0n1p2"
 
@@ -72,9 +72,9 @@ options root=/dev/$p rootflags=subvol=@ rw quiet loglevel=3 rd.system.show_statu
 #servizi
 systemctl enable NetworkManager
 systemctl enable firewalld
-#systemctl enable bluetooth
+systemctl enable bluetooth
 systemctl enable cronie
-#systemctl enable reflector
+systemctl enable reflector
 
 
 rm -r /home/2-parte.sh
