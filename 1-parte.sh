@@ -13,13 +13,13 @@
 #p3="/dev/vda3"
 
 #sda - SSD
-p1="/dev/sda1"
-p2="/dev/sda2"
-p3="/dev/sda3" 
+#p1="/dev/sda1"
+#p2="/dev/sda2"
+#p3="/dev/sda3" 
 
 #Setting - Country, editor, kernel
-country="gb"
-editor="vim"
+country="" # us
+editor="" # vim - nano 
 kernel="linux"
 
 
