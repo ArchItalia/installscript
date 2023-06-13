@@ -25,7 +25,10 @@ ZS="16G" # dimensione massima della swap che zram deve impostare esempio 4G [4 g
 groups="wheel" # aggiungi gruppi all'utente esempio wheel,video,nordvpn etc [non eliminare wheel]
 pkgs="wpa_supplicant wireless_tools netctl net-tools iw networkmanager alsa-utils pipewire-pulse firewalld mtools dosfstools exfatprogs reflector acpi cronie git"
 DE="gnome-shell nautilus gnome-console gvfs gnome-control-center xdg-user-dirs-gtk gdm xorg gnome-text-editor gnome-keyring gnome-system-monitor" #GNOME Minimal gnome installation
-#p="sda2"
+
+# root=/dev/XXX decommenta la nomenclatura in uso per systemd-boot IMPORTANTE!
+
+#p="sda2" 
 #p="vda2"
 #p="nvme0n1p2"
 
