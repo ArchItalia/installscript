@@ -1,4 +1,5 @@
 # installscript
+### [It] - Italiano 🇮🇹
 Un ulteriore metodo di installazione programmato attraverso uno script personalizzato predisposto per File System BTRFS con creazione sottovolumi e regola udev zram per swap, ma completamente personalizzabile secondo l'esigenza della propria macchina.
 
 ### A chi serve?
@@ -6,6 +7,16 @@ Per utenti gia' esperti che non devono fare l'esperienza di comprendere come si 
 
 ### A cosa serve?
 Serve per chi non ha tempo o voglia di stare a inserire tuti i comandi a mano durante una nuova installazione, da conservare su una piccola partizione in futuro mantenendo cosi le configurazioni iniziali della prima installazione, nel caso si abbia bisogno di reinstallare.
+
+
+### [En] - English 🇬🇧
+Another installation method programmed through a custom script prepared for File System BTRFS with subvolume creation and udev zram rule for swap, but completely customizable according to the needs of your machine.
+
+### Who is needed?
+For experienced users who don't need the experience of understanding how to build their own system with Arch Linux.
+
+### What is it for?
+It is needed for those who don't have the time or desire to enter all the commands by hand during a new installation, to be kept on a small partition in the future thus maintaining the initial coordinates of the first installation, in case you need to reinstall.
 
 ![Untitled33333333333333](https://github.com/ArchItalia/installscript/assets/117321045/08205c35-f2fc-4c25-9617-e70680b6964d)
 
