@@ -21,6 +21,7 @@ A questo punto possiamo modificare 1-parte.sh e 2-part.sh tramite vim per person
 salva la partizione per il futuro con gli script già configurati nel caso tu abbia bisogno di una reinstallazione pulita, basta avviare live e montare la partizione 4 in /run/mount/ e avviare ./1-part.
 
 
+##
 
 
 ## [En] - English 🇬🇧
