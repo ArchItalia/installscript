@@ -1,4 +1,8 @@
 # installscript
+
+![Untitled33333333333333](https://github.com/ArchItalia/installscript/assets/117321045/08205c35-f2fc-4c25-9617-e70680b6964d)
+
+
 ### [It] - Italiano 🇮🇹
 Un ulteriore metodo di installazione programmato attraverso uno script personalizzato predisposto per File System BTRFS con creazione sottovolumi e regola udev zram per swap, ma completamente personalizzabile secondo l'esigenza della propria macchina.
 
@@ -18,7 +22,6 @@ For experienced users who don't need the experience of understanding how to buil
 ### What is it for?
 It is needed for those who don't have the time or desire to enter all the commands by hand during a new installation, to be kept on a small partition in the future thus maintaining the initial coordinates of the first installation, in case you need to reinstall.
 
-![Untitled33333333333333](https://github.com/ArchItalia/installscript/assets/117321045/08205c35-f2fc-4c25-9617-e70680b6964d)
 
 
 
