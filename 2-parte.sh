@@ -77,7 +77,7 @@ echo 'ACTION=="add", KERNEL=="zram0", ATTR{comp_algorithm}="zstd", ATTR{disksize
 echo "/dev/zram0 none swap defaults,pri=100 0 0 " >> /etc/fstab
 
 
-pacman -S $Ntools $Utils $Audio $PKGS $DE --noconfirm
+pacman -S $Ntools $Utils $Audio $PKGS $DE $DM --noconfirm
 
 systemctl enable $Service
 
