@@ -10,7 +10,7 @@ Un ulteriore metodo di installazione programmato attraverso uno script personali
 Per utenti gia' esperti che non devono fare l'esperienza di comprendere come si costruisce il proprio sistema con Arch Linux.
 
 ### A cosa serve?
-Serve per chi non ha tempo o voglia di stare a inserire tuti i comandi a mano durante una nuova installazione, da conservare su una piccola partizione in futuro mantenendo cosi le configurazioni iniziali della prima installazione, nel caso si abbia bisogno di reinstallare.
+Serve per chi non ha tempo o voglia di stare a inserire tutti i comandi a mano durante una nuova installazione, da conservare su una piccola partizione in futuro mantenendo cosi le configurazioni iniziali della prima installazione, nel caso si abbia bisogno di reinstallare.
 
 Guida: è necessario preparare il disco partizionando come si vede nel [video](https://www.youtube.com/watch?v=OfQpp3B5zc8) utilizzando "cfdisk", le partizioni necessarie sono 4 efi, root, home, e la piccola partizione dedicata alla clonazione degli script per questa installazione. In questa procedura la Swap sara' gestita dopo l'installazione tramite Zram.
 
