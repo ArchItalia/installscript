@@ -1,6 +1,12 @@
 #!/bin/bash
-# author Jonathan Sanfilippo
-# script per l'installazione di Arch Linux
+# Part 1/2
+# Author Jonathan Sanfilippo - 10 Jun 2023
+# Another installation method programmed through a custom script 
+# prepared for File System BTRFS with subvolume creation and udev 
+# zram rule for swap, but completely customizable according to the needs of your machine.
+# architalialinux@gmail.com
+
+
 
 # settings script 1
 
