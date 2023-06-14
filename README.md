@@ -1,9 +1,10 @@
 # installscript
 Un ulteriore metodo di installazione programmato attraverso uno script personalizzato predisposto per File System BTRFS con creazione sottovolumi e regola udev zram per swap, ma completamente personalizzabile secondo l'esigenza della propria macchina.
-A chi serve?
+
+### A chi serve?
 Per utenti gia' esperti che non devono fare l'esperienza di comprendere come si costruisce il proprio sistema con Arch Linux.
 
-A cosa serve?
+### A cosa serve?
 Serve per chi non ha tempo o voglia di stare a inserire tuti i comandi a mano durante una nuova installazione, da conservare su una piccola partizione in futuro mantenendo cosi le configurazioni iniziali della prima installazione, nel caso si abbia bisogno di reinstallare.
 
 ![Untitled33333333333333](https://github.com/ArchItalia/installscript/assets/117321045/08205c35-f2fc-4c25-9617-e70680b6964d)
