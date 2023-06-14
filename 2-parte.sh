@@ -9,19 +9,24 @@
 
 # settings script 2
 
-localhost="localhost"
-user="username"    # username solo minuscolo
-realname="realname" # nome reale con iniziale maiuscola
-rootpw="password"
-userpw="password"
-localegen="en_US.UTF-8 UTF-8" # lingua
-localeconf="LANG=en_US.UTF-8"  # lingua
-km="us" # keymap - lingua della tastiera
-localtime="Europe/Italy" # posizione London, France etc..
-ZS="16G" # dimensione massima della swap che zram deve impostare esempio 4G [4 gigabyte]
-groups="wheel" # aggiungi gruppi all'utente esempio wheel,video,nordvpn etc [non eliminare wheel]
-pkgs="wpa_supplicant wireless_tools netctl net-tools iw networkmanager alsa-utils pipewire-pulse firewalld mtools dosfstools exfatprogs reflector acpi cronie git"
-DE="gnome-shell nautilus gnome-console gvfs gnome-control-center xdg-user-dirs-gtk gdm xorg gnome-text-editor gnome-keyring gnome-system-monitor" #GNOME Minimal gnome installation
+localhost="localhost" # nome machina - hostname
+user="username"    # nome utente [solo minuscolo] -- username [only lowercase]
+realname="realname" # nome reale [minuscolo/maiuscolo] - real name [uppercase/lowercase]
+rootpw="password" # password per root -- root password
+userpw="password" # password per utente -- user password
+localegen="en_US.UTF-8 UTF-8" # locale encoding
+localeconf="LANG=en_US.UTF-8"  # lingua locale -- local language
+km="us" # lingua della tastiera -- keyboard layout
+localtime="Europe/Italy" # localtime
+ZS="16G" # dimensione swap zram - size swap zram
+groups="wheel" # aggiungi gruppi all'utente - add groups for user
+Ntools="wpa_supplicant wireless_tools netctl net-tools iw networkmanager" # set network tools
+Audio="alsa-utils pipewire-pulse" # Audio packages
+Utils="mtools dosfstools exfatprogs fuse" # tools 
+PKGS="firewalld acpi cronie git reflector bluez bluez-utils" #general packages
+DE="xorg gnome-shell nautilus gnome-console gvfs gnome-control-center xdg-user-dirs-gtk  gnome-text-editor gnome-keyring gnome-system-monitor" #GNOME [Minimal installation]
+DM="gdm" # Display Manager
+Service="gdm NetworkManager firewalld bluetooth cronie reflector" # Service
 
 # root=/dev/XXX decommenta la nomenclatura in uso per systemd-boot IMPORTANTE!
 
@@ -30,6 +35,9 @@ DE="gnome-shell nautilus gnome-console gvfs gnome-control-center xdg-user-dirs-g
 #p="nvme0n1p2"
 
 # end setting ----------------------------------------------
+
+
+
 
 
 ln -sf /usr/share/zoneinfo/$localtime /etc/localtime 
@@ -69,17 +77,9 @@ echo 'ACTION=="add", KERNEL=="zram0", ATTR{comp_algorithm}="zstd", ATTR{disksize
 echo "/dev/zram0 none swap defaults,pri=100 0 0 " >> /etc/fstab
 
 
-pacman -S $pkgs $DE --noconfirm
+pacman -S $Ntools $Utils $Audio $PKGS $DE --noconfirm
 
-
-#servizi
-systemctl enable gdm
-systemctl enable NetworkManager
-systemctl enable firewalld
-systemctl enable bluetooth
-systemctl enable cronie
-systemctl enable reflector
-
+systemctl enable $Service
 
 rm -r /home/2-parte.sh #clear
 
