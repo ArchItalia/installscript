@@ -7,8 +7,7 @@
 # architalialinux@gmail.com
 
 
-
-# setting variable for arch here ---------------------
+# settings script 2
 
 localhost="localhost"
 user="username"    # username solo minuscolo
