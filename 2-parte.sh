@@ -1,13 +1,11 @@
 #!/bin/bash
-# author Jonathan Sanfilippo
-# installazione parte seconda chroot
+# Part 2/2
+# Author Jonathan Sanfilippo - 10 Jun 2023
+# Another installation method programmed through a custom script 
+# prepared for File System BTRFS with subvolume creation and udev 
+# zram rule for swap, but completely customizable according to the needs of your machine.
+# architalialinux@gmail.com
 
-# Colors
-Green='\033[1;32m'
-Blue='\033[1;34m'
-Red='\033[1;31m'
-Yellow='\033[0;33m'
-Color_Off='\033[0m'
 
 
 # setting variable for arch here ---------------------
