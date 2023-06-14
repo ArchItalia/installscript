@@ -16,7 +16,7 @@ Guida: è necessario preparare il disco partizionando come si vede nel [video](h
 
 Una volta preparato il disco, formattare la partizione 4 in ext4, montare la partizione in /run/mount, andare nella directory /run/mount, installare git, clonare gli script dal repository, diamo i permessi con chmod +x *
 
-A questo punto possiamo modificare 1-parte.sh e 2-parte.sh tramite vim per personalizzazioni personali, una volta configurato avviando l'installazione tramite ./1-part alla fine quando entra in chroot da solo spostatevi su cd /home e avviate . /2-parte.sh
+A questo punto possiamo modificare 1-parte.sh e 2-parte.sh tramite vim per personalizzazioni personali, una volta configurato avviando l'installazione tramite ./1-parte.sh alla fine quando entra in chroot da solo spostatevi su cd /home e avviate . /2-parte.sh
 
 salva la partizione per il futuro con gli script già configurati nel caso tu abbia bisogno di una reinstallazione pulita, basta avviare live e montare la partizione 4 in /run/mount/ e avviare ./1-parte.sh.
 
