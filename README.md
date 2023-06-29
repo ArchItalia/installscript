@@ -5,7 +5,7 @@
 
 
 ## [It] - Italiano 🇮🇹
-Un ulteriore metodo di installazione programmato attraverso uno script personalizzato predisposto per File System BTRFS con creazione sottovolumi e regola udev zram per swap, ma completamente personalizzabile secondo l'esigenza della propria macchina.
+Un ulteriore metodo di installazione programmato attraverso uno script personalizzato  tra File System BTRFS con creazione sottovolumi, ext4 e lvm, possibilita' con regola udev zram per swap, ma completamente personalizzabile secondo l'esigenza della propria macchina.
 
 ### A chi serve?
 Per utenti gia' esperti che non devono fare l'esperienza di comprendere come si costruisce il proprio sistema con Arch Linux.
@@ -26,7 +26,7 @@ salva la partizione per il futuro con gli script già configurati nel caso tu ab
 
 
 ## [En] - English 🇬🇧
-Another installation method programmed through a custom script prepared for File System BTRFS with subvolume creation and udev zram rule for swap, but completely customizable according to the needs of your machine.
+Another installation method programmed through a customized script between the BTRFS File System with creation of subvolumes, ext4 and lvm, possibility with udev zram rule for swap, but completely customizable according to the needs of your machine.
 
 ### Who is needed?
 For experienced users who don't need the experience of understanding how to build their own system with Arch Linux.
