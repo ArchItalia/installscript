@@ -28,14 +28,22 @@ DE="xorg gnome-shell nautilus gnome-console gvfs gnome-control-center xdg-user-d
 DM="gdm" # Display Manager
 Service="gdm NetworkManager firewalld bluetooth cronie reflector" # Service
 
-# [root=/dev/XXX] decommenta la nomenclatura in uso per systemd-boot IMPORTANTE! -- uncomment the nomenclature in use for systemd-boot IMPORTANT!
+# ---- [root=/dev/XXX] decommenta la nomenclatura in uso per systemd-boot IMPORTANTE! -- uncomment the nomenclature in use for systemd-boot IMPORTANT!
 
 #p="sda2" 
 #p="vda2"
 #p="nvme0n1p2"
+#p="mapper/lvm-root"
+
+# ---- btrfs flag for systemd-boot
+btrfsflag="rootflags=subvol=@"
+
+# ---- mkinitcpio.conf
+
+#mkinit="lvmh"
 
 # end setting ----------------------------------------------
-
+############################################################
 
 
 
@@ -59,6 +67,16 @@ echo "$user ALL=(ALL:ALL) ALL" >> /etc/sudoers.d/$user
 #echo "$user ALL=NOPASSWD: /usr/bin/yay" >> /etc/sudoers.d/$user
 #echo "$user ALL=NOPASSWD: /usr/bin/vim" >> /etc/sudoers.d/$user
 
+#mkinitcpio.conf
+lvmh(){
+echo "MODULES=(btrfs nvidia nvidia_modeset nvidia_uvm nvidia_drm)
+BINARIES=()
+FILES=()
+HOOKS=(base udev autodetect modconf block lvm2 filesystems keyboard fsck)" > /etc/mkinitcpio.conf
+}
+
+$mkinit
+
 
 
 #systemd-boot
@@ -69,7 +87,7 @@ echo "timeout 3" >> /boot/loader/loader.conf
 echo "title Arch Linux
 linux /vmlinuz-linux
 initrd /initramfs-linux.img
-options root=/dev/"$p" rootflags=subvol=@ rw quiet loglevel=3 rd.system.show_status=auto rd.udev.log_level=3" > /boot/loader/entries/arch.conf
+options root=/dev/"$p" $btrfsflag rw quiet loglevel=3 rd.system.show_status=auto rd.udev.log_level=3" > /boot/loader/entries/arch.conf
 
 #zram udev rules 
 echo "zram" > /etc/modules-load.d/zram.conf
@@ -83,6 +101,9 @@ systemctl enable $Service
 
 rm -r /home/2-parte.sh #clear
 
+echo ""
+echo "Installscript: installazione conclusa"
+echo "Esci con il comando exit"
 
 
 
