@@ -13,7 +13,7 @@ Per utenti gia' esperti che non devono fare l'esperienza di comprendere come si 
 ### A cosa serve?
 Serve per chi non ha tempo o voglia di stare a inserire tutti i comandi a mano durante una nuova installazione, da conservare su una piccola partizione in futuro mantenendo cosi le configurazioni iniziali della prima installazione, nel caso si abbia bisogno di reinstallare.
 
-Guida: è necessario preparare il disco partizionando come si vede nel [video](https://www.youtube.com/watch?v=OfQpp3B5zc8) utilizzando "cfdisk", le partizioni necessarie sono 4 efi, root, home, e la piccola partizione dedicata alla clonazione degli script per questa installazione. In questa procedura la Swap sara' gestita dopo l'installazione tramite Zram.
+Guida: è necessario preparare il disco partizionando come si vede nel [video](https://youtu.be/qCWySju6GTY) utilizzando "cfdisk", le partizioni necessarie sono 4 efi, root, home, e la piccola partizione dedicata alla clonazione degli script per questa installazione. In questa procedura la Swap sara' gestita dopo l'installazione tramite Zram.
 
 Una volta preparato il disco, formattare la partizione 4 in ext4, montare la partizione in /run/mount, andare nella directory /run/mount, installare git, clonare gli script dal repository, diamo i permessi con chmod +x *
 
@@ -35,7 +35,7 @@ For experienced users who don't need the experience of understanding how to buil
 It is needed for those who don't have the time or desire to enter all the commands by hand during a new installation, to be kept on a small partition in the future thus maintaining the initial coordinates of the first installation, in case you need to reinstall.
 
 
-Guide: it is necessary to prepare the disk by partitioning as seen in the [video](https://www.youtube.com/watch?v=OfQpp3B5zc8) using "cfdisk", the necessary partitions are 4 efi, root, home, and the small partition dedicated to cloning the scripts for this installation. In this procedure it is assumed that Swap is managed after installation using Zram.
+Guide: it is necessary to prepare the disk by partitioning as seen in the [video](https://youtu.be/qCWySju6GTY) using "cfdisk", the necessary partitions are 4 efi, root, home, and the small partition dedicated to cloning the scripts for this installation. In this procedure it is assumed that Swap is managed after installation using Zram.
 
 Once the disk has been prepared, format partition 4 in ext4, mount the partition in /run/mount, go to the /run/mount directory, install git, clone the scripts from the ArchItalia repository, we give permissions with chmod +x *
 
